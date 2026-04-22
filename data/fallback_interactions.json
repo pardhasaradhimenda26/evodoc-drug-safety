@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "version": "2.1.0",
+    "source": "Clinical pharmacology references: Stockley's Drug Interactions, FDA drug labels, WHO Essential Medicines",
+    "last_updated": "2025-01-01",
+    "total_interactions": 25
+  },
+  "interactions": [
+    {
+      "drug_a": "warfarin",
+      "drug_b": "aspirin",
+      "severity": "high",
+      "mechanism": "Pharmacodynamic synergism: both inhibit coagulation pathways. Aspirin inhibits platelet aggregation via COX-1 and displaces warfarin from plasma protein binding sites, increasing free warfarin concentration.",
+      "clinical_recommendation": "Avoid concurrent use unless explicitly indicated (e.g., mechanical heart valves). If unavoidable, use lowest effective aspirin dose (≤100mg/day), monitor INR closely, and watch for bleeding signs.",
+      "interaction_type": "pharmacokinetic + pharmacodynamic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "metformin",
+      "drug_b": "contrast_dye",
+      "severity": "high",
+      "mechanism": "Iodinated contrast media can cause acute kidney injury. In renal impairment, metformin accumulates and causes lactic acidosis.",
+      "clinical_recommendation": "Hold metformin 48 hours before and after contrast administration. Restart only after confirming normal renal function.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "simvastatin",
+      "drug_b": "amlodipine",
+      "severity": "medium",
+      "mechanism": "Amlodipine inhibits CYP3A4, increasing simvastatin plasma levels by ~77%, raising myopathy risk.",
+      "clinical_recommendation": "Cap simvastatin at 20mg/day when co-administered with amlodipine. Consider switching to pravastatin or rosuvastatin (not CYP3A4 metabolized).",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "ciprofloxacin",
+      "drug_b": "antacids",
+      "severity": "medium",
+      "mechanism": "Divalent cations (Mg²⁺, Al³⁺, Ca²⁺) in antacids chelate ciprofloxacin in GI tract, reducing oral bioavailability by 50-90%.",
+      "clinical_recommendation": "Administer ciprofloxacin 2 hours before or 6 hours after antacids, iron, or calcium supplements.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "ssri",
+      "drug_b": "maoi",
+      "severity": "high",
+      "mechanism": "Combined serotonergic activity causes serotonin syndrome: hyperthermia, neuromuscular abnormalities, autonomic instability. Can be fatal.",
+      "clinical_recommendation": "Absolutely contraindicated. Allow 14-day washout after stopping MAOI before starting SSRI. Allow 5 weeks washout after fluoxetine.",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "methotrexate",
+      "drug_b": "nsaid",
+      "severity": "high",
+      "mechanism": "NSAIDs reduce renal prostaglandin synthesis, decreasing renal blood flow and methotrexate clearance. Methotrexate toxicity (bone marrow suppression, mucositis) can result.",
+      "clinical_recommendation": "Avoid NSAIDs with high-dose methotrexate. If low-dose MTX for RA, monitor closely. Use paracetamol as alternative analgesic.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "digoxin",
+      "drug_b": "amiodarone",
+      "severity": "high",
+      "mechanism": "Amiodarone inhibits P-glycoprotein and CYP3A4, raising digoxin plasma levels by 70-100%. Risk of digoxin toxicity (bradycardia, AV block, arrhythmia).",
+      "clinical_recommendation": "Reduce digoxin dose by 30-50% when initiating amiodarone. Monitor digoxin levels and ECG closely.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "lithium",
+      "drug_b": "ibuprofen",
+      "severity": "high",
+      "mechanism": "NSAIDs inhibit renal prostaglandin synthesis, reducing lithium clearance by 25%, leading to lithium toxicity (tremor, ataxia, confusion, renal failure).",
+      "clinical_recommendation": "Avoid NSAIDs with lithium. Use paracetamol instead. If NSAID unavoidable, monitor lithium levels every 5 days.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "clopidogrel",
+      "drug_b": "omeprazole",
+      "severity": "medium",
+      "mechanism": "Omeprazole inhibits CYP2C19, the enzyme that converts clopidogrel to its active thiol metabolite, reducing antiplatelet effect by ~45%.",
+      "clinical_recommendation": "Prefer pantoprazole or rabeprazole (weaker CYP2C19 inhibition) as gastroprotection. Avoid omeprazole and esomeprazole.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "rifampicin",
+      "drug_b": "oral_contraceptives",
+      "severity": "high",
+      "mechanism": "Rifampicin potently induces CYP3A4 and glucuronosyltransferases, dramatically reducing plasma levels of ethinylestradiol and progestogens, causing contraceptive failure.",
+      "clinical_recommendation": "Use alternative/additional non-hormonal contraception during rifampicin therapy and for 4 weeks after stopping. Condoms are reliable backup.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "ace_inhibitor",
+      "drug_b": "potassium_sparing_diuretic",
+      "severity": "high",
+      "mechanism": "Both drugs reduce aldosterone-mediated potassium excretion, causing dangerous hyperkalaemia (K⁺ >6.5 mmol/L), which can cause fatal cardiac arrhythmias.",
+      "clinical_recommendation": "Avoid combination unless monitored in specialist settings. Monitor serum K⁺ within 1 week of starting combination.",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "fluoroquinolone",
+      "drug_b": "corticosteroid",
+      "severity": "medium",
+      "mechanism": "Fluoroquinolones inhibit tenocyte proliferation; corticosteroids reduce tendon collagen synthesis. Combined risk of tendon rupture is significantly elevated.",
+      "clinical_recommendation": "Avoid combination in patients >60 years, kidney/heart/lung transplant recipients, or with prior tendinopathy. Use alternative antibiotics.",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "tramadol",
+      "drug_b": "ssri",
+      "severity": "high",
+      "mechanism": "Both increase serotonergic neurotransmission. Combined use substantially raises risk of serotonin syndrome. Tramadol also inhibits serotonin reuptake independently.",
+      "clinical_recommendation": "Avoid combination. If pain management required, use non-serotonergic opioids (morphine, oxycodone) with caution.",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "sildenafil",
+      "drug_b": "nitrate",
+      "severity": "high",
+      "mechanism": "Both drugs act on NO-cGMP pathway causing vasodilation. Combined use causes severe, potentially fatal hypotension.",
+      "clinical_recommendation": "Absolutely contraindicated. Do not use within 24 hours of sildenafil (48 hours for tadalafil).",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "metronidazole",
+      "drug_b": "alcohol",
+      "severity": "high",
+      "mechanism": "Metronidazole inhibits aldehyde dehydrogenase, causing accumulation of acetaldehyde after alcohol ingestion. Results in disulfiram-like reaction: flushing, nausea, tachycardia.",
+      "clinical_recommendation": "Avoid alcohol during metronidazole therapy and for 48 hours after completion.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "carbamazepine",
+      "drug_b": "valproate",
+      "severity": "medium",
+      "mechanism": "Valproate inhibits epoxide hydrolase, increasing carbamazepine-10,11-epoxide (toxic metabolite) levels, causing toxicity despite normal carbamazepine levels.",
+      "clinical_recommendation": "Monitor for carbamazepine toxicity (diplopia, ataxia, nausea). Measure both carbamazepine and epoxide metabolite levels.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "phenytoin",
+      "drug_b": "fluconazole",
+      "severity": "high",
+      "mechanism": "Fluconazole inhibits CYP2C9, the primary enzyme metabolizing phenytoin. Phenytoin levels can double, causing toxicity (nystagmus, ataxia, cognitive impairment).",
+      "clinical_recommendation": "Monitor phenytoin levels closely within 3-5 days of starting fluconazole. Consider dose reduction of 25-33%.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "theophylline",
+      "drug_b": "ciprofloxacin",
+      "severity": "high",
+      "mechanism": "Ciprofloxacin inhibits CYP1A2, reducing theophylline clearance by 30-50%. Theophylline toxicity risk: nausea, arrhythmias, seizures.",
+      "clinical_recommendation": "Reduce theophylline dose by 30-50% when adding ciprofloxacin. Monitor plasma theophylline levels closely.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "tacrolimus",
+      "drug_b": "clarithromycin",
+      "severity": "high",
+      "mechanism": "Clarithromycin potently inhibits CYP3A4 and P-glycoprotein, increasing tacrolimus bioavailability by 3-5x, risking nephrotoxicity and neurotoxicity.",
+      "clinical_recommendation": "Avoid combination. If unavoidable, reduce tacrolimus dose by 50-75% and monitor trough levels daily.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "atorvastatin",
+      "drug_b": "clarithromycin",
+      "severity": "medium",
+      "mechanism": "Clarithromycin inhibits CYP3A4, increasing atorvastatin AUC by ~80%, elevating risk of myopathy and rhabdomyolysis.",
+      "clinical_recommendation": "Temporarily stop atorvastatin during short antibiotic courses. If statin must continue, use pravastatin or rosuvastatin.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "beta_blocker",
+      "drug_b": "verapamil",
+      "severity": "high",
+      "mechanism": "Additive pharmacodynamic depression of SA and AV node conduction. Risk of symptomatic bradycardia, heart block, and cardiogenic shock.",
+      "clinical_recommendation": "Contraindicated in combination IV/IV or oral/IV. If both oral needed, use with extreme caution and continuous cardiac monitoring.",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "trimethoprim",
+      "drug_b": "metformin",
+      "severity": "medium",
+      "mechanism": "Trimethoprim inhibits renal tubular secretion of metformin (OCT2 transporter), increasing metformin plasma levels by ~50%, raising lactic acidosis risk.",
+      "clinical_recommendation": "Monitor renal function during co-administration. Reduce metformin dose in elderly or those with reduced GFR.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "B"
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "fluconazole",
+      "severity": "high",
+      "mechanism": "Fluconazole inhibits CYP2C9 (primary warfarin S-enantiomer metabolism), causing 2-3x increase in INR within days.",
+      "clinical_recommendation": "Reduce warfarin dose by 25-50% when starting fluconazole. Check INR after 2 days and every 3-4 days thereafter.",
+      "interaction_type": "pharmacokinetic",
+      "evidence_level": "A"
+    },
+    {
+      "drug_a": "haloperidol",
+      "drug_b": "lithium",
+      "severity": "medium",
+      "mechanism": "Combined use associated with irreversible neurological damage in some case reports. Lithium may enhance haloperidol neurotoxicity.",
+      "clinical_recommendation": "Use lowest effective doses. Monitor for signs of neurotoxicity: confusion, extrapyramidal symptoms. Check lithium levels frequently.",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "C"
+    },
+    {
+      "drug_a": "azithromycin",
+      "drug_b": "hydroxychloroquine",
+      "severity": "high",
+      "mechanism": "Both drugs prolong QTc interval via hERG potassium channel blockade. Combined use substantially increases risk of Torsades de Pointes and ventricular fibrillation.",
+      "clinical_recommendation": "Avoid combination. If unavoidable, obtain baseline ECG, ensure QTc <450ms (male) / <470ms (female), monitor QTc daily.",
+      "interaction_type": "pharmacodynamic",
+      "evidence_level": "B"
+    }
+  ],
+  "drug_class_map": {
+    "penicillin": ["amoxicillin", "ampicillin", "piperacillin", "oxacillin", "cloxacillin", "flucloxacillin", "dicloxacillin", "nafcillin", "methicillin", "amoxicillin-clavulanate", "ampicillin-sulbactam", "piperacillin-tazobactam"],
+    "cephalosporin": ["cefalexin", "cephalexin", "cefazolin", "cefuroxime", "cefixime", "ceftriaxone", "cefotaxime", "ceftazidime", "cefepime", "cefdinir", "cefpodoxime"],
+    "sulfonamide": ["sulfamethoxazole", "co-trimoxazole", "trimethoprim-sulfamethoxazole", "sulfadiazine", "sulfasalazine", "sulfacetamide", "dapsone"],
+    "nsaid": ["ibuprofen", "naproxen", "diclofenac", "indomethacin", "ketorolac", "piroxicam", "mefenamic acid", "meloxicam", "celecoxib", "etoricoxib", "aspirin"],
+    "ssri": ["fluoxetine", "sertraline", "paroxetine", "citalopram", "escitalopram", "fluvoxamine"],
+    "maoi": ["phenelzine", "tranylcypromine", "isocarboxazid", "selegiline", "rasagiline", "moclobemide"],
+    "ace_inhibitor": ["enalapril", "ramipril", "lisinopril", "captopril", "perindopril", "quinapril", "trandolapril", "benazepril", "fosinopril"],
+    "arb": ["losartan", "valsartan", "irbesartan", "olmesartan", "candesartan", "telmisartan", "azilsartan"],
+    "beta_blocker": ["metoprolol", "atenolol", "propranolol", "carvedilol", "bisoprolol", "labetalol", "nebivolol", "acebutolol", "nadolol"],
+    "statin": ["atorvastatin", "simvastatin", "rosuvastatin", "pravastatin", "lovastatin", "fluvastatin", "pitavastatin"],
+    "fluoroquinolone": ["ciprofloxacin", "levofloxacin", "moxifloxacin", "ofloxacin", "norfloxacin", "gemifloxacin"],
+    "macrolide": ["azithromycin", "clarithromycin", "erythromycin", "roxithromycin"],
+    "nitrate": ["nitroglycerin", "glyceryl trinitrate", "isosorbide mononitrate", "isosorbide dinitrate", "nicorandil"],
+    "potassium_sparing_diuretic": ["spironolactone", "eplerenone", "amiloride", "triamterene"],
+    "anticoagulant": ["warfarin", "heparin", "enoxaparin", "rivaroxaban", "apixaban", "dabigatran", "fondaparinux", "acenocoumarol"],
+    "corticosteroid": ["prednisolone", "prednisone", "dexamethasone", "hydrocortisone", "methylprednisolone", "budesonide", "beclomethasone", "triamcinolone"],
+    "tetracycline": ["doxycycline", "minocycline", "tetracycline", "oxytetracycline"],
+    "opiate": ["morphine", "codeine", "tramadol", "oxycodone", "fentanyl", "hydrocodone", "buprenorphine", "methadone", "pethidine"],
+    "pde5_inhibitor": ["sildenafil", "tadalafil", "vardenafil", "avanafil"],
+    "antifungal_azole": ["fluconazole", "itraconazole", "ketoconazole", "voriconazole", "posaconazole"]
+  },
+  "cross_reactivity_rates": {
+    "penicillin_to_cephalosporin": "1-2%",
+    "penicillin_to_carbapenem": "<1%",
+    "sulfonamide_antibiotic_to_sulfonamide_nonantibiotic": "<1% (structural difference)"
+  }
+}

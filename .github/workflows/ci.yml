@@ -1,0 +1,95 @@
+name: EvoDoc Drug Safety Engine — CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run Test Suite
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests with coverage
+        run: |
+          pip install pytest-cov
+          pytest tests/ -v --tb=short --cov=. --cov-report=term-missing
+
+      - name: Validate required files exist
+        run: |
+          echo "Checking required submission files..."
+          test -f main.py              && echo "✅ main.py"
+          test -f engine.py            && echo "✅ engine.py"
+          test -f cache.py             && echo "✅ cache.py"
+          test -f models.py            && echo "✅ models.py"
+          test -f prompts/system_prompt.txt && echo "✅ prompts/system_prompt.txt"
+          test -f data/fallback_interactions.json && echo "✅ data/fallback_interactions.json"
+          test -f tests/test_engine.py && echo "✅ tests/test_engine.py"
+          test -f requirements.txt     && echo "✅ requirements.txt"
+          test -f .env.example         && echo "✅ .env.example"
+          test -f README.md            && echo "✅ README.md"
+          echo "All required files present."
+
+      - name: Validate fallback dataset has ≥15 interactions
+        run: |
+          python -c "
+          import json
+          with open('data/fallback_interactions.json') as f:
+              data = json.load(f)
+          count = len(data['interactions'])
+          assert count >= 15, f'Only {count} interactions in fallback dataset (minimum 15 required)'
+          print(f'✅ Fallback dataset: {count} interactions')
+          "
+
+      - name: Validate drug class map coverage
+        run: |
+          python -c "
+          import json
+          with open('data/fallback_interactions.json') as f:
+              data = json.load(f)
+          classes = data['drug_class_map']
+          print(f'✅ Drug classes mapped: {len(classes)}')
+          for cls, drugs in classes.items():
+              print(f'   {cls}: {len(drugs)} drugs')
+          "
+
+  lint:
+    name: Code Quality Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ruff
+        run: pip install ruff
+      - name: Run ruff linter
+        run: ruff check . --ignore E501,F401 || true
+        # Non-blocking: shows issues but doesn't fail CI

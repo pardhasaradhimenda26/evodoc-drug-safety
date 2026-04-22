@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "source": "BNF, WHO, CDSCO Drug Prescribing in Renal and Hepatic Failure guidelines"
+  },
+  "contraindications": [
+    {
+      "drug_class": "nsaid",
+      "drugs": ["ibuprofen", "naproxen", "diclofenac", "indomethacin", "ketorolac", "piroxicam", "meloxicam", "celecoxib", "etoricoxib"],
+      "conditions": ["chronic_kidney_disease", "renal_failure", "peptic_ulcer", "gi_bleeding", "heart_failure", "hypertension"],
+      "severity": "contraindicated",
+      "reason": "NSAIDs reduce renal prostaglandin synthesis causing vasoconstriction and acute kidney injury. Also worsen hypertension, heart failure, and GI mucosal integrity.",
+      "alternative": "Paracetamol for analgesia; proton pump inhibitors if GI risk present"
+    },
+    {
+      "drug_class": "metformin",
+      "drugs": ["metformin"],
+      "conditions": ["renal_failure", "chronic_kidney_disease", "hepatic_failure", "congestive_heart_failure"],
+      "severity": "contraindicated",
+      "reason": "Impaired drug clearance leads to accumulation and potentially fatal lactic acidosis.",
+      "alternative": "SGLT2 inhibitors (if eGFR >45), GLP-1 agonists, or insulin"
+    },
+    {
+      "drug_class": "ace_inhibitor_arb",
+      "drugs": ["enalapril", "ramipril", "lisinopril", "losartan", "valsartan", "irbesartan"],
+      "conditions": ["bilateral_renal_artery_stenosis", "pregnancy"],
+      "severity": "contraindicated",
+      "reason": "ACE inhibitors cause severe fetal renal toxicity (pregnancy) and acute renal failure in bilateral RAS.",
+      "alternative": "Nifedipine/amlodipine for hypertension in pregnancy; specialist review for RAS"
+    },
+    {
+      "drug_class": "fluoroquinolone",
+      "drugs": ["ciprofloxacin", "levofloxacin", "moxifloxacin"],
+      "conditions": ["epilepsy", "seizure_disorder", "myasthenia_gravis"],
+      "severity": "use_with_caution",
+      "reason": "Fluoroquinolones lower seizure threshold and can exacerbate myasthenia gravis by blocking neuromuscular junction.",
+      "alternative": "Use alternative antibiotic class based on susceptibility testing"
+    },
+    {
+      "drug_class": "statin",
+      "drugs": ["simvastatin", "atorvastatin", "rosuvastatin", "pravastatin"],
+      "conditions": ["hepatic_failure", "active_liver_disease"],
+      "severity": "contraindicated",
+      "reason": "Statins are hepatically metabolized and can worsen hepatic function in active liver disease.",
+      "alternative": "Treat underlying liver disease first; reassess cardiovascular risk"
+    },
+    {
+      "drug_class": "corticosteroid",
+      "drugs": ["prednisolone", "dexamethasone", "methylprednisolone"],
+      "conditions": ["diabetes", "osteoporosis", "active_infection", "peptic_ulcer"],
+      "severity": "use_with_caution",
+      "reason": "Corticosteroids worsen glycaemic control, accelerate bone loss, suppress immunity worsening infections, and damage GI mucosa.",
+      "alternative": "Use steroid-sparing immunosuppressants where possible; add bone protection and blood sugar monitoring"
+    },
+    {
+      "drug_class": "anticoagulant",
+      "drugs": ["warfarin", "heparin", "rivaroxaban", "apixaban", "dabigatran"],
+      "conditions": ["active_bleeding", "peptic_ulcer", "gi_bleeding", "hemorrhagic_stroke"],
+      "severity": "contraindicated",
+      "reason": "Anticoagulants increase bleeding risk. Active hemorrhage or recent intracranial bleed is an absolute contraindication.",
+      "alternative": "Treat underlying bleeding source first. Use mechanical prophylaxis if anticoagulation urgently needed."
+    },
+    {
+      "drug_class": "beta_blocker",
+      "drugs": ["metoprolol", "atenolol", "propranolol", "carvedilol"],
+      "conditions": ["asthma", "copd", "second_degree_heart_block", "third_degree_heart_block"],
+      "severity": "contraindicated",
+      "reason": "Beta-blockers cause bronchospasm in asthma/COPD and worsen cardiac conduction blocks.",
+      "alternative": "Selective beta-1 blockers (bisoprolol) with caution in mild COPD; CCBs for HR control; pacemaker for blocks"
+    },
+    {
+      "drug_class": "tetracycline",
+      "drugs": ["doxycycline", "minocycline", "tetracycline"],
+      "conditions": ["pregnancy"],
+      "severity": "contraindicated",
+      "reason": "Tetracyclines deposit in fetal bone and teeth causing permanent discoloration and bone growth impairment.",
+      "alternative": "Azithromycin or amoxicillin for most indications in pregnancy"
+    },
+    {
+      "drug_class": "thiazolidinedione",
+      "drugs": ["pioglitazone", "rosiglitazone"],
+      "conditions": ["heart_failure", "hepatic_failure", "bladder_cancer"],
+      "severity": "contraindicated",
+      "reason": "Thiazolidinediones cause fluid retention worsening heart failure. Pioglitazone associated with bladder cancer risk.",
+      "alternative": "Metformin, SGLT2 inhibitors, or GLP-1 agonists"
+    },
+    {
+      "drug_class": "digoxin",
+      "drugs": ["digoxin"],
+      "conditions": ["hypertrophic_obstructive_cardiomyopathy", "wolff_parkinson_white"],
+      "severity": "contraindicated",
+      "reason": "Digoxin increases contractility which worsens HOCM outflow obstruction. In WPW, it can enhance accessory pathway conduction causing VF.",
+      "alternative": "Beta-blockers or calcium channel blockers for rate control"
+    },
+    {
+      "drug_class": "aminoglycoside",
+      "drugs": ["gentamicin", "amikacin", "tobramycin", "streptomycin"],
+      "conditions": ["chronic_kidney_disease", "renal_failure", "hearing_loss", "myasthenia_gravis"],
+      "severity": "use_with_caution",
+      "reason": "Aminoglycosides are nephrotoxic and ototoxic. Accumulate in renal impairment. Worsen neuromuscular blockade in myasthenia.",
+      "alternative": "Use alternative antibiotics if available; if essential, dose adjust for renal function and monitor drug levels"
+    },
+    {
+      "drug_class": "morphine_opioids",
+      "drugs": ["morphine", "codeine", "tramadol", "oxycodone", "fentanyl"],
+      "conditions": ["chronic_kidney_disease", "renal_failure", "hepatic_failure", "copd", "asthma"],
+      "severity": "use_with_caution",
+      "reason": "Active opioid metabolites accumulate in renal failure causing prolonged CNS/respiratory depression. Opioids suppress respiratory drive worsening COPD/asthma.",
+      "alternative": "Fentanyl (safer in renal failure). Low-dose with monitoring. Non-opioid analgesics preferred."
+    },
+    {
+      "drug_class": "sulfonylurea",
+      "drugs": ["glibenclamide", "glipizide", "gliclazide", "glimepiride", "glibornuride"],
+      "conditions": ["renal_failure", "hepatic_failure", "elderly"],
+      "severity": "use_with_caution",
+      "reason": "Sulfonylureas cause prolonged hypoglycaemia in renal/hepatic failure due to drug/metabolite accumulation. High-risk in elderly.",
+      "alternative": "Gliclazide MR preferred in mild-moderate CKD. Insulin for severe impairment."
+    },
+    {
+      "drug_class": "spironolactone",
+      "drugs": ["spironolactone", "eplerenone"],
+      "conditions": ["hyperkalemia", "renal_failure"],
+      "severity": "contraindicated",
+      "reason": "Aldosterone antagonists reduce potassium excretion. In hyperkalemia or renal failure, can cause fatal cardiac arrest.",
+      "alternative": "Loop diuretics. Patiromer or sodium zirconium cyclosilicate for K+ management."
+    }
+  ]
+}
